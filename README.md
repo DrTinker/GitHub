@@ -1,4 +1,4 @@
-# GitHub
+# Java实现AStar算法
 DrTinker
 
 Java实现A_Star算法
