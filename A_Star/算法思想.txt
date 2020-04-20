@@ -1,0 +1,15 @@
+start:创建frontier容器，读取并保存状态，读入初始状态
+
+repeat:
+    1.如果frontier为空，则返回无解（no solution)
+    2.从frontier移除一个node
+        ps：为了避免死循环，我们还需要建立一个保存已探索节点的容器（explored node）
+    3.如果移除的这个node包含目标状态（goal state），则返回结果（result:从起始状态到终止状态的node序列）
+    4.否则调用扩展函数扩展node，将扩展的node加入frontier
+
+移除node的算法
+    1.DFS（深度优先算法）：frontier使用栈（Stack）结构存储节点
+    2.BFS（广度优先算法）：frontier使用队列（Queue）结构存储节点
+    3.GBFS（Greedy Best_first Search）：使用激发函数（Heuritic function,e.g:曼哈顿距离）衡量node移除优先级
+    4.A* Search：同时考虑g(n)+h(n)
+                h(n):Heuritic function      g(n):cost
